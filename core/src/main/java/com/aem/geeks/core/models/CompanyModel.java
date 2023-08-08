@@ -1,4 +1,4 @@
-package com.aem.geeks.core.models.impl;
+package com.aem.geeks.core.models;
 
 import java.util.List;
 import lombok.Getter;
@@ -8,12 +8,13 @@ import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 @Model(adaptables = SlingHttpServletRequest.class,
-    resourceType = AuthorImpl.RESOURCE_TYPE,
-    defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
+    defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL,
+    resourceType = {CompanyModel.RESOURCE_TYPE}
 )
 @Getter
-public class CompanyImpl {
+public class CompanyModel {
 
+  protected static final String RESOURCE_TYPE = "aemgeeks/components/content/company";
   @ValueMapValue
   private String name;
   @ValueMapValue
