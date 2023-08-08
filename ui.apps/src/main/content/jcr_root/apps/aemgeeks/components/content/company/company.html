@@ -1,0 +1,13 @@
+<div data-sly-use.company="com.aem.geeks.core.models.impl.CompanyImpl">
+    <p>
+        company name:${company.name}
+    </p>
+    <p>
+        company desc:${company.description}
+    </p>
+    <div data-sly-list="${company.employees}">
+        <p>
+            ${item}
+        </p>
+    </div>
+</div>
