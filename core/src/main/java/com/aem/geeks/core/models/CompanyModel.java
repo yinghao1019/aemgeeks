@@ -30,24 +30,24 @@ public class CompanyModel {
   @Inject
   Resource resource;
 
-  public String getEmployeeNames() {
-
-    Resource employees = resource.getChild("employees");
-    List<String> employeeNameList = new ArrayList<>();
-
-    try {
-      if (employees != null) {
-        for (Resource employee : employees.getChildren()) {
-          String employeeName = employee.getValueMap().get("name", String.class);
-          if (StringUtils.isNotEmpty(employeeName)) {
-            employeeNameList.add(employeeName);
-          }
-        }
-      }
-    } catch (Exception e) {
-      Log.error("Company Model error:", e);
-    }
-
-    return String.join(",", employeeNameList);
-  }
+//  public String getEmployeeNames() {
+//
+//    Resource employees = resource.getChild("employees");
+//    List<String> employeeNameList = new ArrayList<>();
+//
+//    try {
+//      if (employees != null) {
+//        for (Resource employee : employees.getChildren()) {
+//          String employeeName = employee.getValueMap().get("name", String.class);
+//          if (StringUtils.isNotEmpty(employeeName)) {
+//            employeeNameList.add(employeeName);
+//          }
+//        }
+//      }
+//    } catch (Exception e) {
+//      Log.error("Company Model error:", e);
+//    }
+//
+//    return String.join(",", employeeNameList);
+//  }
 }
