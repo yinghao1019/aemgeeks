@@ -8,7 +8,6 @@ import org.osgi.service.metatype.annotations.Option;
     @ObjectClassDefinition(name="AEM Geeks - Modular OSGi Configuration",
             description = "Modular OSGi Configuration demo.")
     public @interface GeeksOSGiConfig {
-
         @AttributeDefinition(
                 name = "Service ID",
                 description = "Enter service id.",
