@@ -9,6 +9,7 @@ import org.osgi.service.metatype.annotations.Option;
             description = "Modular OSGi Configuration demo.")
     public @interface GeeksOSGiConfig {
 
+        s
         @AttributeDefinition(
                 name = "Service ID",
                 description = "Enter service id.",
